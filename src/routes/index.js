@@ -12,13 +12,13 @@ import {
 
 const router = Router();
 
-router.get("/event-stats/:id", eventStats);
-router.get("/get-events-details/:id", getEventsDetails);
-router.get("/list-upcoming-events", listUpcomingEvents);
+router.get("/events/:id/stats", eventStats);
+router.get("/events/:id", getEventsDetails);
+router.get("/events/upcoming", listUpcomingEvents);
 
-router.post("/create-event", createEvent);
-router.post("/create-user", createUser);
-router.post("/register-for-event", registerForEvent);
-router.post("/cancell-registration", cancellRegistration);
+router.post("/events", createEvent);
+router.post("/users", createUser);
+router.post("/events/register", registerForEvent);
+router.delete("/events/cancel", cancellRegistration);
 
 export default router;
